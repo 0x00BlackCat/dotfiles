@@ -1,0 +1,14 @@
+theme = "Black Metal"
+
+font-size = 14
+font-family = Iosevka 
+cursor-style = block
+cursor-style-blink = true 
+
+background-opacity = 0.9
+
+confirm-close-surface = false
+gtk-titlebar = false
+window-decoration = server
+
+shell-integration-features = no-cursor,no-sudo,no-title
