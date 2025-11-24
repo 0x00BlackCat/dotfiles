@@ -4,10 +4,8 @@ SAVEHIST=1000000000
 setopt autocd extendedglob nomatch
 unsetopt beep
 bindkey -e
-autoload -Uz compinit promptinit
-compinit
-promptinit
-prompt adam1 
+setopt PROMPT_SUBST
+PROMPT='%F{white}%n%f@%F{cyan}%m%f %F{white}%~%f %% '
 
 zstyle :compinstall filename '~/.zshrc'
 

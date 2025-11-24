@@ -63,6 +63,7 @@ declare -A COMPONENT_MAP=(
     ["hypr"]="hypr/colors.conf"
     ["nvim"]="~/.config/nvim/lua/custom/plugins/colorscheme.lua"
     ["wofi"]="wofi/style.css"
+    ["btop"]="btop/themes/current.theme"
 )
 
 # Get list of available themes
@@ -197,6 +198,12 @@ fi
 if pgrep -x ghostty >/dev/null; then
     killall -SIGUSR2 ghostty 2>/dev/null || true
     echo "[OK] Ghostty reloaded"
+fi
+
+# Reload btop if running
+if pgrep -x btop >/dev/null; then
+    pkill -SIGUSR2 btop 2>/dev/null || true
+    echo "[OK] Btop reloaded"
 fi
 
 if command -v notify-send >/dev/null 2>&1; then

@@ -5,7 +5,7 @@
   "spacing": 0,
   "height": 26,
   "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["clock",],
+  "modules-center": ["clock"],
   "modules-right": [
     "group/tray-expander",
     "bluetooth",
@@ -43,13 +43,12 @@
   "cpu": {
     "interval": 5,
     "format": "󰍛",
-    "on-click": "omarchy-launch-or-focus-tui btop"
+    "on-click": "ghostty -e btop"
   },
   "clock": {
     "format": "{:L%A %H:%M}",
     "format-alt": "{:L%d %B W%V %Y}",
-    "tooltip": false,
-    "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
+    "tooltip": false
   },
   "network": {
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
@@ -62,7 +61,7 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "spacing": 1,
-    "on-click": "omarchy-launch-wifi"
+    "on-click": "ghostty -e nmtui"
   },
   "battery": {
     "format": "{capacity}% {icon}",
@@ -77,7 +76,6 @@
     "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
     "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
     "interval": 5,
-    "on-click": "omarchy-menu power",
     "states": {
       "warning": 20,
       "critical": 10
@@ -91,16 +89,17 @@
     "tooltip-format": "Devices connected: {num_connections}",
     "on-click": "blueberry"
   },
+  
   "wireplumber": {
-    "format": "{icon}",
-    "on-click": "ghostty -e wiremix",
-    "tooltip-format": "Playing at {volume}%",
-    "scroll-step": 5,
-    "format-muted": "",
-    "format-icons": {
+	  "format": "{icon} ",
+	  "on-click": "ghostty -e wiremix",
+	  "format-sound-muted": "",
+	  "tooltip-format": "Playing at {volume}%",
+	  "format-icons": {
       "default": ["", "", ""]
-    }
+	  }
   },
+
   "group/tray-expander": {
     "orientation": "inherit",
     "drawer": {

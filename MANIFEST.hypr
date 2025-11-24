@@ -1,3 +1,4 @@
+btop|symlink|.config
 .tmux.conf|symlink|
 #.vimrc|symlink|
 #i3|symlink|.config
