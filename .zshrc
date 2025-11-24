@@ -9,7 +9,7 @@ compinit
 promptinit
 prompt adam1 
 
-zstyle :compinstall filename '/home/time/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -49,7 +49,7 @@ alias ka='killall' \
       sdn='shutdown -h now' \
       p='pacman' \
       gg='lazygit' \
-      #vim='nvim'
+      vim='nvim'
 
 # Process management
 alias psa='ps auxf' \

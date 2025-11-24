@@ -1,11 +1,11 @@
-theme = "Black Metal"
+config-file = ~/.config/ghostty/colors
 
 font-size = 14
 font-family = Iosevka 
 cursor-style = block
 cursor-style-blink = true 
 
-background-opacity = 0.9
+#background-opacity = 0.9
 
 confirm-close-surface = false
 gtk-titlebar = false
