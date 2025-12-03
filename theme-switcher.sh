@@ -64,6 +64,7 @@ declare -A COMPONENT_MAP=(
     ["nvim"]="~/.config/nvim/lua/custom/plugins/colorscheme.lua"
     ["wofi"]="wofi/style.css"
     ["btop"]="btop/themes/current.theme"
+    ["hyprlock"]="hypr/hyprlock.conf"
 )
 
 # Get list of available themes

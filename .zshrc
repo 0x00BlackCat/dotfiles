@@ -6,6 +6,7 @@ unsetopt beep
 bindkey -e
 setopt PROMPT_SUBST
 PROMPT='%F{white}%n%f@%F{cyan}%m%f %F{white}%~%f %% '
+export PATH=$PATH:$HOME/go/bin
 
 zstyle :compinstall filename '~/.zshrc'
 
@@ -39,7 +40,8 @@ alias cp='cp -iv' \
 alias grep='grep --color=auto' \
       diff='diff --color=auto' \
       ccat='highlight --out-format=ansi' \
-      ip='ip -color=auto'
+      ip='ip -color=auto' \
+	  ls='ls --color=auto'
 
 # Shortcuts
 alias ka='killall' \
@@ -63,3 +65,6 @@ alias jctl='journalctl -p 3 -xb'
 
 command -v zoxide >/dev/null && source <(zoxide init --cmd cd zsh)
 command -v fzf >/dev/null && source <(fzf --zsh)
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"

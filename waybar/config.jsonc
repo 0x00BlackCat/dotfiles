@@ -93,7 +93,7 @@
   "wireplumber": {
 	  "format": "{icon} ",
 	  "on-click": "ghostty -e wiremix",
-	  "format-sound-muted": "",
+	  "format-muted": "MUTED",
 	  "tooltip-format": "Playing at {volume}%",
 	  "format-icons": {
       "default": ["", "", ""]

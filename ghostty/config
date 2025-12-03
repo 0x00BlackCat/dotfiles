@@ -1,11 +1,13 @@
 config-file = ~/.config/ghostty/colors
 
 font-size = 14
-font-family = Iosevka 
+#font-family = Iosevka 
+font-family = CaskaydiaMono Nerd Font 
 cursor-style = block
 cursor-style-blink = true 
 
-#background-opacity = 0.9
+# background-opacity = 0.85
+background = 000000
 
 confirm-close-surface = false
 gtk-titlebar = false
