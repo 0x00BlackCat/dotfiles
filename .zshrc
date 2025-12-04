@@ -63,6 +63,14 @@ alias fman="compgen -c | fzf | xargs man"
 # Journal
 alias jctl='journalctl -p 3 -xb'
 
+# test lsd
+
+alias ls='lsd'
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
+
 command -v zoxide >/dev/null && source <(zoxide init --cmd cd zsh)
 command -v fzf >/dev/null && source <(fzf --zsh)
 
