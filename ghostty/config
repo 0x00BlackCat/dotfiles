@@ -6,8 +6,8 @@ font-size = 14
 cursor-style = block
 cursor-style-blink = true 
 
-# background-opacity = 0.85
-# background = 000000
+background-opacity = 0.9
+background = 000000
 
 confirm-close-surface = false
 gtk-titlebar = false
