@@ -5,9 +5,8 @@ setopt autocd extendedglob nomatch
 unsetopt beep
 bindkey -e
 setopt PROMPT_SUBST
-PROMPT='%F{white}%n%f@%F{cyan}%m%f %F{white}%~%f %% '
 export PATH=$PATH:$HOME/go/bin
-
+PROMPT="%n@%m %~ %% "
 zstyle :compinstall filename '~/.zshrc'
 
 autoload -Uz compinit
@@ -49,7 +48,7 @@ alias ka='killall' \
       sdn='shutdown -h now' \
       p='pacman' \
       gg='lazygit' \
-      vim='nvim'
+      vim='nvim' \
 
 # Process management
 alias psa='ps auxf' \
@@ -63,16 +62,6 @@ alias fman="compgen -c | fzf | xargs man"
 # Journal
 alias jctl='journalctl -p 3 -xb'
 
-# test lsd
-
-alias ls='lsd'
-alias l='ls -l'
-alias la='ls -a'
-alias lla='ls -la'
-alias lt='ls --tree'
 
 command -v zoxide >/dev/null && source <(zoxide init --cmd cd zsh)
-command -v fzf >/dev/null && source <(fzf --zsh)
-
-# Generated for envman. Do not edit.
-[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+#command -v fzf >/dev/null && source <(fzf --zsh)
