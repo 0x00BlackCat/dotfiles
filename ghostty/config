@@ -1,8 +1,10 @@
 theme = Vague 
-font-size = 18
+font-size = 16
 font-family = DejaVuSansM Nerd Font
 cursor-style = block
 cursor-style-blink = true 
+
+background-opacity = 0.9
 
 confirm-close-surface = false
 gtk-titlebar = false

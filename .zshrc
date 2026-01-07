@@ -6,13 +6,16 @@ unsetopt beep
 bindkey -e
 setopt PROMPT_SUBST
 export PATH=$PATH:$HOME/go/bin
-PROMPT="%n@%m %~ %% "
 zstyle :compinstall filename '~/.zshrc'
 
-autoload -Uz compinit
-compinit
+autoload -U compinit && compinit
 
 export PATH="$HOME/.local/bin:$PATH"
+
+
+# Completion
+
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 # === Aliases ===
 
@@ -62,6 +65,30 @@ alias fman="compgen -c | fzf | xargs man"
 # Journal
 alias jctl='journalctl -p 3 -xb'
 
+# Eza
+alias ls='eza --icons'
+
+# fzf test
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
+export FZF_DEFAULT_OPTS="
+  --layout=reverse
+  --info=inline
+  --height=80%
+  --multi
+  --preview 'bat --style=numbers --color=always --line-range :500 {}'
+  --preview-window 'right:60%:wrap'
+  --bind 'ctrl-/:toggle-preview'
+  --bind 'ctrl-y:execute-silent(echo -n {2..} | xclip -selection clipboard)+abort'
+"
+
+
 
 command -v zoxide >/dev/null && source <(zoxide init --cmd cd zsh)
-#command -v fzf >/dev/null && source <(fzf --zsh)
+command -v fzf >/dev/null && source <(fzf --zsh)
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+export MANPAGER='nvim +Man!'
+eval "$(starship init zsh)"
+eval "$(atuin init zsh)"
