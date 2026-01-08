@@ -1,10 +1,12 @@
-theme = Vague 
+#theme = Vague 
+theme = Seabed 
 font-size = 16
 font-family = DejaVuSansM Nerd Font
 cursor-style = block
 cursor-style-blink = true 
 
-background-opacity = 0.9
+#background-opacity = 0.9
+background = #11262d
 
 confirm-close-surface = false
 gtk-titlebar = false
@@ -13,3 +15,7 @@ window-decoration = server
 shell-integration-features = no-cursor,no-sudo,no-title
 
 keybind = ctrl+shift+w=close_surface
+window-padding-x = 10
+window-padding-y = 10
+keybind = ctrl+,=unbind
+ 
