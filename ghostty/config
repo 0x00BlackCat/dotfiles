@@ -4,6 +4,7 @@ font-size = 13
 font-family = CaskaydiaMono Nerd Font 
 cursor-style = block
 cursor-style-blink = true 
+custom-shader = cursor_smear.glsl
 
 confirm-close-surface = false
 gtk-titlebar = false
