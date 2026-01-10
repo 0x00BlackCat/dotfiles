@@ -1,12 +1,9 @@
-#theme = Vague 
-theme = Seabed 
-font-size = 16
-font-family = DejaVuSansM Nerd Font
+theme = TokyoNight Night 
+
+font-size = 13
+font-family = CaskaydiaMono Nerd Font 
 cursor-style = block
 cursor-style-blink = true 
-
-#background-opacity = 0.9
-background = #11262d
 
 confirm-close-surface = false
 gtk-titlebar = false
